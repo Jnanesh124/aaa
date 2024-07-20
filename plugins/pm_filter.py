@@ -11,7 +11,7 @@ from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidD
 from Script import script
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
-from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, SUPPORT_CHAT_ID, CUSTOM_FILE_CAPTION, MSG_ALRT, PICS, GRP_LNK, CHNL_LNK, NOR_IMG, LOG_CHANNEL, SPELL_IMG, MAX_B_TN, \
+from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, SUPPORT_CHAT_ID, CUSTOM_FILE_CAPTION, MSG_ALRT, PICS, GRP_LNK, CHNL_LNK, LOG_CHANNEL, SPELL_IMG, MAX_B_TN, \
     NO_RESULTS_MSG, IS_VERIFY, HOW_TO_VERIFY
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
 from pyrogram import Client, filters, enums
@@ -111,7 +111,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", url=await get_shortlink(query.message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
+                    text=f"🍿[{get_size(file.file_size)}] {file.file_name}", url=await get_shortlink(query.message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                 ),
             ]
             for file in files
@@ -133,7 +133,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"🍿[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -155,25 +155,26 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞", url=f"https://t.me/+Ce98xoyvoLcwYThl"),
+                    InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
+                    InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f'https://t.me/+q-PhLzazP-AzOGI1')
                 ]
             )
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞", url=f"https://t.me/+Ce98xoyvoLcwYThl"),
+                    InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
+                    InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f'https://t.me/+q-PhLzazP-AzOGI1')
                 ]
             )            
     except KeyError:
         await save_group_settings(query.message.chat.id, 'auto_delete', True)
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞", url=f"https://t.me/+Ce98xoyvoLcwYThl"),
+                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
+                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f'https://t.me/+q-PhLzazP-AzOGI1')
             ]
         )
     try:
@@ -242,11 +243,7 @@ async def next_page(bot, query):
                 ],
             )
     btn.insert(0, [
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#files#{offset}#{req}"),
-        InlineKeyboardButton("! Lᴀɴɢᴜᴀɢᴇs !", callback_data=f"select_lang#{req}")
-    ])
-    btn.insert(0, [
-        InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"select_lang#{req}")
     ])
     try:
         await query.edit_message_reply_markup(
@@ -282,7 +279,7 @@ async def language_check(bot, query):
             btn = [
                 [
                     InlineKeyboardButton(
-                        text=f"[{get_size(file.file_size)}] {file.file_name}", url=await get_shortlink(query.message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
+                        text=f"🍿[{get_size(file.file_size)}] {file.file_name}", url=await get_shortlink(query.message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                     ),
                 ]
                 for file in files
@@ -305,7 +302,7 @@ async def language_check(bot, query):
             btn = [
                 [
                     InlineKeyboardButton(
-                        text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                        text=f"🍿[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
                     ),
                 ]
                 for file in files
@@ -329,17 +326,18 @@ async def language_check(bot, query):
             if settings['auto_delete']:
                 btn.insert(0, 
                     [
-                        InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                        InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                        InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                        InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞", url=f"https://t.me/+Ce98xoyvoLcwYThl"),
+                        InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
+                        InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f'https://t.me/+q-PhLzazP-AzOGI1')
                     ]
                 )
 
             else:
                 btn.insert(0, 
                     [
-                        InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                        InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                        InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞", url=f"https://t.me/+Ce98xoyvoLcwYThl"),
+                        InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
+                        InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f'https://t.me/+q-PhLzazP-AzOGI1')
                     ]
                 )
                     
@@ -347,19 +345,14 @@ async def language_check(bot, query):
             await save_group_settings(query.message.chat.id, 'auto_delete', True)
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞", url=f"https://t.me/+Ce98xoyvoLcwYThl"),
+                    InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
+                    InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f'https://t.me/+q-PhLzazP-AzOGI1')
                 ]
             )
         
         btn.insert(0, [
-            InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{userid}"),
-            InlineKeyboardButton("! Lᴀɴɢᴜᴀɢᴇs !", callback_data=f"select_lang#{userid}")
-        ])
-
-        btn.insert(0, [
-            InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
+            InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"select_lang#{userid}")
         ])
 
         if offset != "":
@@ -1573,7 +1566,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
+                    text=f"🍿[{get_size(file.file_size)}] {file.file_name}", url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                 ),
             ]
             for file in files
@@ -1596,7 +1589,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"🍿[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -1619,35 +1612,31 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞", url=f"https://t.me/+Ce98xoyvoLcwYThl"),
+                    InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
+                    InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f'https://t.me/+q-PhLzazP-AzOGI1')
                 ]
             )
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞", url=f"https://t.me/+Ce98xoyvoLcwYThl"),
+                    InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
+                    InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f'https://t.me/+q-PhLzazP-AzOGI1')
                 ]
             )       
     except KeyError:
         await save_group_settings(message.chat.id, 'auto_delete', True)
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                InlineKeyboardButton("🔞 𝐀𝐝𝐮𝐥𝐭 𝐕𝐢𝐝𝐞𝐨𝐬 🔞", url=f"https://t.me/+Ce98xoyvoLcwYThl"),
+                InlineKeyboardButton("💬 𝐠𝐫𝐨𝐮𝐩", url=f"https://t.me/+oQT1f1iF4fU4ZGVl"),
+                InlineKeyboardButton("📪 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞𝐬 📪", url=f'https://t.me/+q-PhLzazP-AzOGI1')
             ]
         )
 
     btn.insert(0, [
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{message.from_user.id}"),
-        InlineKeyboardButton("! Lᴀɴɢᴜᴀɢᴇs !", callback_data=f"select_lang#{message.from_user.id}")
-    ])
-
-    btn.insert(0, [
-        InlineKeyboardButton("⚡ Cʜᴇᴄᴋ Bᴏᴛ PM ⚡", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton("🔊 𝐒𝐞𝐥𝐞𝐜𝐭 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐘𝐨𝐮𝐫 𝐋𝐚𝐮𝐧𝐠𝐮𝐚𝐠 🔊", callback_data=f"select_lang#{message.from_user.id}")
     ])
 
     if offset != "":
@@ -1737,7 +1726,7 @@ async def auto_filter(client, msg, spoll=False):
                 await message.delete()
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            fek = await reply_msg.edit_text(text=cap, reply_markup=InlineKeyboardMarkup(btn))
             try:
                 if settings['auto_delete']:
                     await asyncio.sleep(600)
@@ -1749,7 +1738,7 @@ async def auto_filter(client, msg, spoll=False):
                 await fek.delete()
                 await message.delete()
     else:
-        fuk = await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+        fuk = await reply_msg.edit_text(text=cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
         try:
             if settings['auto_delete']:
                 await asyncio.sleep(600)
