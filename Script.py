@@ -1,7 +1,7 @@
 class script(object):
     START_TXT = """<b> i am movie send bot 
     
-    click /gfilters to see added movie</b>"""
+    just type below ur movie Name </b>"""
 
     HELP_TXT = """<b>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
