@@ -209,7 +209,7 @@ Nᴀᴍᴇ - {}"""
 
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
-IMDb Data:
+Movie Detailes:
 
 🏷 Title: <a href={url}>{title}</a>
 🎭 Genres: {genres}
