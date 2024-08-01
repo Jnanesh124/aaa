@@ -63,9 +63,27 @@ async def start(client, message):
                 InlineKeyboardButton(
                     "❆ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-Uᴘ Cʜᴀɴɴᴇʟ ❆", url=invite_link.invite_link
                 ),
+                InlineKeyboardButton(
+                    "❆ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-Uᴘ Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/Rockers_Movie_Requist_Group"
+                ),
+        ],[
+                InlineKeyboardButton(
+                    "❆ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-Uᴘ Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+IohsF8xYXd01MzJl"
+                ),
+                InlineKeyboardButton(
+                    "❆ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-Uᴘ Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+STrC6f9TZaQxMGJl"
+                ),
+        ],[
+                InlineKeyboardButton(
+                    "❆ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-Uᴘ Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+clrCOD5j5f4wNmNl"
+                ),
+                InlineKeyboardButton(
+                    "❆ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-Uᴘ Cʜᴀɴɴᴇʟ ❆", url=f"https://t.me/+MkmB-unfQk02YTU1"
+                ),
+       ],[
+         ]
         ]
-        ]
-
+        
         if message.command[1] != "subscribe":
             try:
                 kk, file_id = message.command[1].split("_", 1)
